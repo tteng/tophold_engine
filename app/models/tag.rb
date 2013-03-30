@@ -7,10 +7,10 @@ class Tag
 
   recursively_embeds_many 
 
-  embedded_in :article, ploymorphic: true
+  embedded_in :article, polymorphic: true
 
-  embedded_in :topic,   ploymorphic: true
+  embedded_in :topic,   polymorphic: true
 
-  embedded_in :sub_topic, ploymorphic: true
+  embedded_in :sub_topic, polymorphic: true
 
 end
