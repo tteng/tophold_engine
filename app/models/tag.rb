@@ -5,7 +5,7 @@ class Tag
 
   field :title, type: String
 
-  recursively_embeds_many index: true, background: true
+  recursively_embeds_many 
 
   embedded_in :article, ploymorphic: true
 

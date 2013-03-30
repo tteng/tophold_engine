@@ -1,6 +1,6 @@
 #encoding: utf-8
 
-Mongoid.add_language("zh-CN")
+#Mongoid.add_language("zh-CN")
 
 module Mongoid
 
