@@ -7,7 +7,7 @@ class Comment
 
   embedded_in :sub_topic, polymorphic: true
 
-  embeds_many :replies, class_name: "Comment", inverseof: :parent
+  embeds_many :replies, class_name: "Comment", inverse_of: :parent
 
   embedded_in :parent,  class_name: "Comment", inverse_of: :replies
 

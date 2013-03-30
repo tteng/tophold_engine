@@ -5,7 +5,7 @@ class UserDocument
 
   has_many :article_scores
 
-  belongs_to :user
+  belongs_to :user, class_name: "User"
 
   index({user_id: 1}, {unique: true, background: true})
 

@@ -1,11 +1,9 @@
-require 'serve_gridfs_image'
-
 module TopholdEngine
 
   class Engine < Rails::Engine
 
     initializer "tophold_rack.load_app_instance_data" do |app|
-      TopholdRack.setup do |config|
+      TopholdEngine.setup do |config|
         config.app_root = app.root
       end
     end   
@@ -15,7 +13,7 @@ module TopholdEngine
 #    end
 
     rake_tasks do
-      require 'resque/tasks'
+      #require 'resque/tasks'
     end
 
   end

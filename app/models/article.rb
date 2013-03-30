@@ -7,12 +7,10 @@ class Article
 
   field :content, type: String 
 
-  attr_protected: _id
+  embeds_many :tags, as: :taggable
 
-  embeds_many :tags, as: taggable
+  embeds_many :comments, as: :commentable
 
-  embeds_many :comments, as: commentable
-
-  has_many :article_scores, dependent: delete
+  has_many :article_scores, dependent: :delete
 
 end

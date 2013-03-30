@@ -7,7 +7,7 @@ class Topic
 
   field :content, type: String
 
-  embeds_many :tags, as: taggable
+  embeds_many :tags, as: :taggable
 
   has_many :sub_topics
 
