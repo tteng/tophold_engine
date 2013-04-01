@@ -13,9 +13,19 @@ module Sunspot
         extend Sunspot::Rails::Searchable::ActsAsMethods
         Sunspot::Adapters::DataAccessor.register(DataAccessor, base)
         Sunspot::Adapters::InstanceAdapter.register(InstanceAdapter, base)
+
         after_save do
           Sunspot.index! self
         end
+
+        after_delete do
+          Sunspot.remove! self
+        end
+
+        after_destroy do
+          Sunspot.remove! self
+        end
+
       end
     end
 
