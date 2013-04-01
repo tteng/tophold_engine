@@ -6,7 +6,7 @@ require 'tophold_engine/version'
 Gem::Specification.new do |gem|
   gem.name          = "tophold_engine"
   gem.version       = TopholdEngine::VERSION
-  gem.authors       = ["shreadline"]
+  gem.authors       = ["tteng"]
   gem.email         = ["tim.rubist@gmail.com"]
   gem.description   = %q{tophold models engine}
   gem.summary       = %q{tophold models center}
