@@ -1,3 +1,5 @@
+require 'mongoid'
+
 module TopholdEngine
 
   class Engine < Rails::Engine
@@ -5,8 +7,6 @@ module TopholdEngine
     config.generators do |g|
       g.orm :active_record
     end
-
-    config.mogoid.observers += [:auto_commit_sunspot]
 
     initializer "tophold_rack.load_app_instance_data" do |app|
       TopholdEngine.setup do |config|
