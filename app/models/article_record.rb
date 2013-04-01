@@ -2,6 +2,8 @@ class ArticleRecord
   
   include Mongoid::Document
 
+  include Mongoid::Timestamps
+
   belongs_to :user_document
 
   belongs_to :article

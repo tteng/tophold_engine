@@ -6,6 +6,8 @@ module TopholdEngine
       g.orm :active_record
     end
 
+    config.mogoid.observers += [:auto_commit_sunspot]
+
     initializer "tophold_rack.load_app_instance_data" do |app|
       TopholdEngine.setup do |config|
         config.app_root = app.root

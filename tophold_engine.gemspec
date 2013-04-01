@@ -23,4 +23,10 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency "mongoid"
 
+  gem.add_dependency "sunspot"
+
+  gem.add_dependency "sunspot_cell"
+
+  gem.add_dependency "sunspot_mongoid"
+
 end
