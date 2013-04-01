@@ -8,6 +8,17 @@ module Sunspot
 
   module Mongoid
 
+    def self.included(base)
+      base.class_eval do
+        extend Sunspot::Rails::Searchable::ActsAsMethods
+        Sunspot::Adapters::DataAccessor.register(DataAccessor, base)
+        Sunspot::Adapters::InstanceAdapter.register(InstanceAdapter, base)
+        after_save do
+          Sunspot.index! self
+        end
+      end
+    end
+
     class DataAccessor < Sunspot::Adapters::DataAccessor
 
       def load(id)
