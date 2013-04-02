@@ -44,7 +44,3 @@ module Sunspot
   end
 
 end
-
-#fix sunspot_mongoid not auto index bug
-require 'auto_commit_sunspot'
-Rails.configuration.mongoid.observers += [:auto_commit_sunspot]
