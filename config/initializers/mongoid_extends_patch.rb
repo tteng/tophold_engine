@@ -24,6 +24,7 @@ end
 
 if defined?(PhusionPassenger)
  PhusionPassenger.on_event(:starting_worker_process) do |forked|
-   Mongoid.master.connection.connect if forked
+   Mongoid.load!("config/mongoid.yml") if forked
+   #Mongoid.master.connection.connect if forked
  end
 end
